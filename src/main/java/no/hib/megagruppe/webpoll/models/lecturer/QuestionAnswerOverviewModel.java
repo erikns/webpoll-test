@@ -1,12 +1,12 @@
 package no.hib.megagruppe.webpoll.models.lecturer;
 
 /**
- * A wrapper class for a singular answer in a question containing 3 datavariables:
- * \n-The text of the chosen answer.
- * \n-The frequency that this answer has been chosen.
- * \n-The percentage of this answer being picked, compared to all the other answers in the same question.
- * @author Magnus
+ * A wrapper class for a singular answer in a question containing three variables:
+ *  - The text of the chosen answer.
+ *  - The frequency that this answer has been chosen.
+ *  - The percentage of this answer being picked, compared to all the other answers in the same question.
  *
+ * @author Magnus
  */
 public class QuestionAnswerOverviewModel {
 	private String answerText;
@@ -30,6 +30,4 @@ public class QuestionAnswerOverviewModel {
 	public double getPercentage() {
 		return percentage;
 	}
-	
-	
 }
