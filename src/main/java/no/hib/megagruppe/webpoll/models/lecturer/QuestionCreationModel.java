@@ -100,4 +100,9 @@ public class QuestionCreationModel {
 	public String[] getOptions(){
 		return options;
 	}
+
+	public boolean isReady() {
+		return (questionType == QuestionType.FREE_TEXT)
+				|| (questionType.isMultipleChoice() && hasAtleastOneOption());
+	}
 }
