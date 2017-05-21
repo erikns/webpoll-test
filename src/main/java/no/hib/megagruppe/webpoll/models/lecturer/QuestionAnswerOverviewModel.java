@@ -9,9 +9,9 @@ package no.hib.megagruppe.webpoll.models.lecturer;
  *
  */
 public class QuestionAnswerOverviewModel {
-	String answerText;
-	Integer frequency;
-	double percentage;
+	private String answerText;
+	private Integer frequency;
+	private double percentage;
 	
 	public QuestionAnswerOverviewModel(String answerText, Integer frequency, double percentage) {
 		this.answerText = answerText;
