@@ -7,7 +7,6 @@ import no.hib.megagruppe.webpoll.entities.OptionEntity;
 import no.hib.megagruppe.webpoll.entities.QuestionEntity.QuestionType;
 
 /**
- * 
  * @author Thomas and Magnus
  * 
  * This class represents a single question in a survey. It is supposed to be used when filling in
@@ -24,12 +23,9 @@ public class SurveyQuestionModel {
 	/**
 	 * Constructor
 	 * 
-	 * @param text
-	 *            which makes up the question
-	 * @param questionType
-	 *            enum - MULTIPLE_CHOICE_CHECKBOX, MULTIPLE_CHOICE_RADIO or FREE_TEXT
-	 * @param optionEntities
-	 *            specifies the options for the question from 'text'
+	 * @param text which makes up the question
+	 * @param questionType enum MULTIPLE_CHOICE_CHECKBOX, MULTIPLE_CHOICE_RADIO or FREE_TEXT
+	 * @param optionEntities specifies the options for the question from 'text'
 	 */
 	public SurveyQuestionModel(String text, QuestionType questionType, List<OptionEntity> optionEntities) {
 		this.text = text;
@@ -47,8 +43,7 @@ public class SurveyQuestionModel {
 	 * Submits a single answer for this question. Use this method only when the questionType is
      * MULTIPLE_CHOICE_RADIO or FREE_TEXT.
 	 *
-	 * @param answer
-	 *            The answer for this question.
+	 * @param answer The answer for this question.
 	 */
 	public void submitAnswer(String answer) {
 		answers = new String[1];
@@ -63,8 +58,7 @@ public class SurveyQuestionModel {
 	 * Submits multiple answers for this question. Use this method only when the questionType is
      * MULTIPLE_CHOICE_CHECKBOX.
 	 * 
-	 * @param answers
-	 *            The list of answers for this question.
+	 * @param answers The list of answers for this question.
 	 */
 	public void submitAnswer(String[] answers) {
 		if (answers != null) {
