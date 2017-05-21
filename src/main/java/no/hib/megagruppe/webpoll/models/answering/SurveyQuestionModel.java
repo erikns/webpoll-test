@@ -10,14 +10,12 @@ import no.hib.megagruppe.webpoll.entities.QuestionEntity.QuestionType;
  * 
  * @author Thomas and Magnus
  * 
- *         This class represents a single question in a survey. It is supposed to be used when filling in information about the
- *         forms in the JSPs for answering questions.
+ * This class represents a single question in a survey. It is supposed to be used when filling in
+ * information about the forms in the JSPs for answering questions.
  * 
- *         The QuestionType is either MULTIPLE_CHOICE_CHECKBOX, MULTIPLE_CHOICE_RADIO, or FREE_TEXT.
- *
+ * The QuestionType is either MULTIPLE_CHOICE_CHECKBOX, MULTIPLE_CHOICE_RADIO, or FREE_TEXT.
  */
 public class SurveyQuestionModel {
-
 	private String text;
 	private QuestionType questionType;
 	private List<String> options;
@@ -46,20 +44,8 @@ public class SurveyQuestionModel {
 	}
 
 	/**
-	 * Helper method to check whether this question is of certain type. Cleaner version of
-	 * question.getQuestionType.equals(questionType);
-	 * 
-	 * @param questionType
-	 *            The type it is checking.
-	 * @return Whether it is of that type.
-	 */
-	public boolean isOfType(QuestionType questionType) {
-		return this.questionType.equals(questionType);
-	}
-
-	/**
-	 * Submits a single answer for this question. Use this method only when the questionType is MULTIPLE_CHOICE_RADIO or
-	 * FREE_TEXT.
+	 * Submits a single answer for this question. Use this method only when the questionType is
+     * MULTIPLE_CHOICE_RADIO or FREE_TEXT.
 	 *
 	 * @param answer
 	 *            The answer for this question.
@@ -74,7 +60,8 @@ public class SurveyQuestionModel {
 	}
 
 	/**
-	 * Submits multiple answers for this question. Use this method only when the questionType is MULTIPLE_CHOICE_CHECKBOX.
+	 * Submits multiple answers for this question. Use this method only when the questionType is
+     * MULTIPLE_CHOICE_CHECKBOX.
 	 * 
 	 * @param answers
 	 *            The list of answers for this question.
@@ -91,7 +78,8 @@ public class SurveyQuestionModel {
 	}
 
 	/**
-	 * The list of options on this question. If there are no options in this question it returns an empty list.
+	 * The list of options on this question. If there are no options in this question it returns an
+     * empty list.
 	 * 
 	 * @return The list of options on this question.
 	 */
